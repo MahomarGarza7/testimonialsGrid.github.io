@@ -14,3 +14,162 @@
     --Light-grayish-blue: hsl(210, 46%, 95%);
     --fontBarlow:'Barlow Semi Condensed', sans-serif;
 }
+.contenedorContenedores{
+background-color: var(--Light-grayish-blue);
+    
+    max-width: 500px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 25px;
+   .gris{
+   background-color: var(--Very-dark-grayish-blue);
+   h4{
+    font-size: large;
+   }
+   
+   }
+   .blanco{
+   background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+   }
+    .grayoscuro{
+    background-color: var(--Very-dark-blackish-blue);
+    }
+    
+}
+
+.contenedores{
+    max-width: 325px;
+    height: 100%;
+    padding: 25px 32px;
+    font-family: var(--fontBarlow);
+    margin: 0 auto;
+    border-radius: 15px;
+    color: var(--White);
+
+}
+
+.contenedor__names{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+}
+.contenedor__head h3{
+    font-size: medium;
+    font-weight: 400;
+}
+
+.contenedor__head p{
+    font-size: small;
+    opacity: 50%;
+
+}
+.morado{
+    background-color: var(--Moderate-violet); 
+    border-radius: 15px;
+    color: var(--White);
+    position: relative;
+    z-index: 1;
+    
+}
+
+
+.contenedor__head{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.contenedores img{
+    height: 50%;
+    width: 42px;
+    border: solid 4px var(--Very-dark-grayish-blue);
+    border-radius: 50%;
+}
+
+.contenedores h4{
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 23px;
+    z-index: 2;
+    
+}
+.contenedores p{
+    opacity: 70%;
+    
+    
+    
+}
+.morado .comillas{
+    height: 125px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 2.3rem;
+    
+    border: none;
+    object-fit: contain;
+    border-radius: 0;
+    z-index: -1;
+}
+
+
+
+
+@media (min-width:800px){
+body{
+ background-color: var(--Light-grayish-blue);
+}
+
+   .contenedorContenedores{
+   min-width: 800px;
+   max-width: 80%;
+   padding: 0;
+   margin-top: 3.5rem;
+   margin-bottom: 3.5rem;
+   height: 80%;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-template-rows: 45% 45%;
+   grid-template-areas: 
+   "uno uno dos tres "
+   "for five five tres"
+   
+   ;
+   gap: 25px;
+
+   }
+   
+    .contenedores{
+    max-width: 100%;
+   
+    }
+   
+   .contenedorContenedores .morado{
+    grid-area: uno;
+   
+   
+    
+   }
+   .uno{
+   grid-area: for;
+   }
+   .dos{
+   
+    grid-area: tres;
+   
+   }
+   
+   .grayoscuro{
+   grid-area: five;
+   }
+   
+   
+
+
+}
